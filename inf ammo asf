@@ -1,7 +1,7 @@
 game.Players.LocalPlayer.Character.Head:Destroy()
 wait(1)
-game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(character)
-    character:WaitForChild("Humanoid").Died:Connect(function()
-        game:GetService("Players").LocalPlayer.Backpack.asval["GE_Configuration"].Variaveis.Ammo.Value = 10000
-    end)
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+   game:GetService("Players").LocalPlayer.Backpack.asval["GE_Configuration"].Variaveis.Ammo.Value = 10000
 end)
+
+        
