@@ -1,0 +1,69 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Strawberry Jam", "Sentinel")
+
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main")
+
+Section:NewButton("ESP", "Load ESP See players", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NotVeryTureCoon/Strawberrysjams/main/ESP"))()
+end)
+
+Section:NewButton("AimBot", "HOW DID HE AIM LOCK ME", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NotVeryTureCoon/Strawberrysjams/main/Aimbot"))()
+end)
+
+
+local Tab = Window:NewTab("GunSTUFF")
+local Section = Tab:NewSection("gun?")
+
+
+Section:NewDropdown("PickYourOpGun", "OPGUN", {"asval", "glock", "fiveseven", "hk416", "m870", "mg3", "mp5", "uzi", "ak74",}, function(v)
+ game:GetService("StarterGui"):SetCore("SendNotification", {Title = "OpGuns", Text = "OpGuns loaded successfully!"})
+ wait(2)
+  game:GetService("StarterGui"):SetCore("SendNotification", {Title = "OpGuns", Text = "I scripted this fully by my self am so pround of me"})
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()     
+local module = nil
+        if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(v) then
+            module = require(game:GetService("Players").LocalPlayer.Backpack[v].GE_Configuration.Variaveis.Settings)
+        elseif game:GetService("Players").LocalPlayer.Character.ignore:FindFirstChild(v) then
+            module = require(game:GetService("Players").LocalPlayer.Character[v].GE_Configuration.Variaveis.Settings)
+        end
+        if module ~= nil then
+module["Bullets"] = 4
+module["FireRate"] = 3000
+module["BurstFireRate"] = 3000
+module["BurstShot"] = 6
+module["BurstFireRate"] = 3000
+module["MagCount"] = false
+module["MaxSpread"] = 0.1
+module["MinSpread"] = 0.1
+module["MinRecoilPower"] = 0.1
+module["MaxRecoilPower"] = 0.1
+        end
+end)
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NotVeryTureCoon/Strawberrysjams/main/inf%20ammo%20asf"))()
+end)
+
+
+local Tab = Window:NewTab("LocalPlayer")
+local Section = Tab:NewSection("LocalPlayer")
+
+Section:NewSlider("SetYourWalkSpeed", "SetYourWalkSpeed thats it", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("SetYourJumpPower", "SetYourJumpPower thats it", 500, 0, function(j) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = j
+end)
+
+
+
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "StrawberryJamGUI", Text = "StrawberryJamGUI loaded successfully!"})
+wait(3)
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "StrawberryJamGUI", Text = "Join Discord Server For More Updates and Scripts"})
+wait(3)
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "StrawberryJamGUI", Text = "Ill update whenever i feel like it"})
+wait(3)
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "StrawberryJamGUI", Text = "Lol Nigga Code"})
