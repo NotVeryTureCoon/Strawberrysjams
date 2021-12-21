@@ -1,0 +1,21 @@
+ game:GetService("StarterGui"):SetCore("SendNotification", {Title = "OpGuns", Text = "OpGuns loaded successfully!"})
+ wait(2)
+  game:GetService("StarterGui"):SetCore("SendNotification", {Title = "OpGuns", Text = "I scripted this fully by my self am so pround of me"})
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()     
+local module = nil
+        if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(v) then
+            module = require(game:GetService("Players").LocalPlayer.Backpack[v].GE_Configuration.Variaveis.Settings)
+        elseif game:GetService("Players").LocalPlayer.Character.ignore:FindFirstChild(v) then
+            module = require(game:GetService("Players").LocalPlayer.Character[v].GE_Configuration.Variaveis.Settings)
+        end
+        if module ~= nil then
+module["Bullets"] = 4
+module["FireRate"] = 3000
+module["BurstFireRate"] = 3000
+module["BurstShot"] = 6
+module["BurstFireRate"] = 3000
+module["MagCount"] = false
+module["MaxSpread"] = 0.1
+module["MinSpread"] = 0.1
+        end
+end)
