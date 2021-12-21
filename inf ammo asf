@@ -1,7 +1,23 @@
-game.Players.LocalPlayer.Character.Head:Destroy()
-wait(1)
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
    game:GetService("Players").LocalPlayer.Backpack.asval["GE_Configuration"].Variaveis.Ammo.Value = 10000
+   wait(0.01)
+   game:GetService("Players").LocalPlayer.Backpack.glock["GE_Configuration"].Variaveis.Ammo.Value = 10000
+   wait(0.01)
+   game:GetService("Players").LocalPlayer.Backpack.fiveseven["GE_Configuration"].Variaveis.Ammo.Value = 10000
+   wait(0.01)
+   game:GetService("Players").LocalPlayer.Backpack.hk416["GE_Configuration"].Variaveis.Ammo.Value = 10000
+   wait(0.01)
+   game:GetService("Players").LocalPlayer.Backpack.m870["GE_Configuration"].Variaveis.Ammo.Value = 10000
+   wait(0.01)
+   game:GetService("Players").LocalPlayer.Backpack.mg3["GE_Configuration"].Variaveis.Ammo.Value = 10000
+   wait(0.01)
+   game:GetService("Players").LocalPlayer.Backpack.mp5["GE_Configuration"].Variaveis.Ammo.Value = 10000
+   wait(0.01)
+   game:GetService("Players").LocalPlayer.Backpack.uzi["GE_Configuration"].Variaveis.Ammo.Value = 10000
+   wait(0.01)
+   game:GetService("Players").LocalPlayer.Backpack.ak74["GE_Configuration"].Variaveis.Ammo.Value = 10000
+   wait(0.01)
+   
 end)
 
         
