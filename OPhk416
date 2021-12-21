@@ -1,0 +1,21 @@
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+    local module = nil
+if game:GetService("Players").LocalPlayer.Backpack.hk416 then
+module = require(game:GetService("Players").LocalPlayer.Backpack.hk416["GE_Configuration"].Variaveis.Settings)
+
+end
+
+if module ~= nil then
+module["Bullets"] = 4
+module["FireRate"] = 3000
+module["BurstFireRate"] = 3000
+module["BurstShot"] = 6
+module["BurstFireRate"] = 3000
+module["MagCount"] = false
+module["MaxSpread"] = 0.1
+module["MinSpread"] = 0.1
+
+
+
+end    
+end)
