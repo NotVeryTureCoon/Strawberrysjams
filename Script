@@ -58,6 +58,16 @@ Section:NewSlider("SetYourJumpPower", "SetYourJumpPower thats it", 500, 0, funct
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = j
 end)
 
+local Tab = Window:NewTab("Settings")
+local Section = Tab:NewSection("Settings")
+
+Section:NewKeybind("Setkeybind to open or close", "bababy code", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+Section:NewButton("Copy Discord link:)", "simd", function()
+        setclipboard("https://discord.gg/D3DHUbeVDd")
+    toclipboard("https://discord.gg/D3DHUbeVDd")
+    end)
 
 
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "StrawberryJamGUI", Text = "StrawberryJamGUI loaded successfully!"})
